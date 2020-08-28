@@ -39,7 +39,7 @@ steps:
   displayName: Analyze with NG SAST
   inputs:
     script: |
-      $(Agent.HomeDirectory)\sl.exe analyze --force --app ShiftLeftJavaAzWin --tag branch=$(Build.SourceBranchName) --java --cpg target/hello-shiftleft-0.0.1.jar
+      $(Agent.HomeDirectory)\sl.exe analyze --force --app netfwWebapi --tag branch=$(Build.SourceBranchName) --csharp --cpg netfwWebapi/netfwWebapi.sln
     workingDirectory: '$(Build.SourcesDirectory)'
   env:
     SHIFTLEFT_ORG_ID: $(SHIFTLEFT_ORG_ID)
