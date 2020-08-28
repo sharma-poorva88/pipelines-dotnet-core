@@ -20,9 +20,3 @@ steps:
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
-
-- task: dependency-check-build-task@5
-  inputs:
-    projectName: 'DevSecOps-Lab'
-    scanPath: '**/*'
-    format: 'ALL'
